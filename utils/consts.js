@@ -1,12 +1,12 @@
-const book = {
-  id: null,
-  title: null,
-  category: null,
-  copies: null,
-  minCopies: null,
-  expiresAt: null,
+const bookObj = {
+  id: 'string',
+  title: 'wer',
+  category: 'string',
+  copies: 0,
+  minCopies: 0,
+  expiresAt: '3333-23-34',
 };
 
 const library = [];
 
-export { book, library };
+export { bookObj, library };
