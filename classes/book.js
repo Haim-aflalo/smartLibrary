@@ -1,13 +1,18 @@
-import { bookObj } from '../utils/consts.js';
 import { isValidDate } from '../utils/functions.js';
 
-export class book {
+export class Book {
+  constructor(id, title, category, copies, minCopies, expiresAt) {
+    this.id = id;
+    this.title = title;
+    this.category = category;
+    this.copies = copies;
+    this.minCopies = minCopies;
+    this.expiresAt = expiresAt;
+  }
   static validateBook(book) {
     const invalidFields = [];
     let isValid = true;
     const test = isValidDate(book.expiresAt);
-    console.log(test);
-
     if (!book.id || typeof book.id !== 'string') {
       invalidFields.push('id');
       isValid = false;
@@ -40,6 +45,3 @@ export class book {
     return { isValid: isValid, invalidFields: invalidFields };
   }
 }
-
-let b = bookObj;
-console.log(book.validateBook(b));
